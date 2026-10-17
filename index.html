@@ -38,7 +38,7 @@
 <div class="footer"></div>
 </div></main>
 <button class="mission-overlay" id="missionOverlay" type="button" aria-hidden="true" tabindex="-1">
-<span><span class="mission-title" id="missionTitle"></span><span class="mission-prompt" id="missionPrompt"></span></span>
+<span><span class="mission-title" id="missionTitle" style="white-space:pre-line"></span><span class="mission-prompt" id="missionPrompt"></span></span>
 </button>
 <script>
 const envelope=document.getElementById('envelope');
@@ -129,7 +129,7 @@ function playEnvelopeSoundOnce(){
 
 function showMission(step){
   missionStep=step;
-  missionTitle.textContent=step===1?'ท่านได้รับภารกิจ':'ภารกิจของท่านคือการอ่านจดหมายของข้าให้จบ';
+  missionTitle.textContent=step===1?'ท่านได้รับภารกิจ':'ภารกิจของท่าน\nคือการอ่านจดหมายของข้าให้จบ';
   missionPrompt.textContent=step===1?'แตะหน้าจอเพื่อไปต่อ':'แตะหน้าจอเพื่อเข้าไปที่หน้าจดหมาย';
   missionOverlay.setAttribute('aria-label',`${missionTitle.textContent} ${missionPrompt.textContent}`);
   missionOverlay.setAttribute('aria-hidden','false');
